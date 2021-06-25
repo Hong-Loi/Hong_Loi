@@ -1,0 +1,9 @@
+andOptions('css', {})), '-moz-border-radius: ${0};\n-o-border-radius: ${0};\nborder-radius: ${0};');
+            return Promise.resolve();
+        });
+    });
+    mocha_1.it('should expand with default vendor prefixes in properties', () => {
+        return updateExtensionsPath(null).then(() => {
+            assert_1.default.equal(emmetHelper_1.expandAbbreviation('-p', emmetHelper_1.getExpandOptions('css', { preferences: { 'css.webkitProperties': 'foo, bar, padding' } })), '-webkit-padding: ${0};\npadding: ${0};');
+            assert_1.default.equal(emmetHelper_1.expandAbbreviation('-p', emmetHelper_1.getExpandOptions('css', { preferences: { 'css.oProperties': 'padding', 'css.webkitProperties': 'padding' } })), '-webkit-padding: ${0};\n-o-padding: ${0};\npadding: ${0};');
+            assert_1.default.equal(emmetHelper_1.expandAbbreviation('-brs', emmetHelper_1.getExpandO

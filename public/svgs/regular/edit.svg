@@ -1,0 +1,26 @@
+tring | ThemeColor;
+
+		/**
+		 * CSS styling property that will be applied to text enclosed by a decoration.
+		 */
+		opacity?: string;
+
+		/**
+		 * CSS styling property that will be applied to text enclosed by a decoration.
+		 */
+		letterSpacing?: string;
+
+		/**
+		 * An **absolute path** or an URI to an image to be rendered in the gutter.
+		 */
+		gutterIconPath?: string | Uri;
+
+		/**
+		 * Specifies the size of the gutter icon.
+		 * Available values are 'auto', 'contain', 'cover' and any percentage value.
+		 * For further information: https://msdn.microsoft.com/en-us/library/jj127316(v=vs.85).aspx
+		 */
+		gutterIconSize?: string;
+
+		/**
+		 * The color of the decoration in the overview ruler. Use rgba() and define transparent colors to play well w

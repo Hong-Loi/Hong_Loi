@@ -1,0 +1,37 @@
+ */
+	export interface MessageItem {
+
+		/**
+		 * A short title like 'Retry', 'Open Log' etc.
+		 */
+		title: string;
+
+		/**
+		 * A hint for modal dialogs that the item should be triggered
+		 * when the user cancels the dialog (e.g. by pressing the ESC
+		 * key).
+		 *
+		 * Note: this option is ignored for non-modal messages.
+		 */
+		isCloseAffordance?: boolean;
+	}
+
+	/**
+	 * Options to configure the behavior of the message.
+	 *
+	 * @see [showInformationMessage](#window.showInformationMessage)
+	 * @see [showWarningMessage](#window.showWarningMessage)
+	 * @see [showErrorMessage](#window.showErrorMessage)
+	 */
+	export interface MessageOptions {
+
+		/**
+		 * Indicates that this message should be modal.
+		 */
+		modal?: boolean;
+	}
+
+	/**
+	 * Options to configure the behavior of the input box UI.
+	 */
+	export interfa

@@ -1,0 +1,4 @@
+="linkClicked(this.jstdata)" jscontent="searchTerms" id="search-link"></a><a href="javascript:diagnoseErrors()" id="diagnose-link">Windowsi võrgudiagnostika käitamine</a><a href="javascript:diagnoseErrors()" id="diagnose-link">Proovige käitada Windowsi võrgudiagnostika tööriista</a>.Lehelt otsimine
+    $1Tulemus $1/$2Tulemusi poleEelmineEdasiSule leiuribaSearch flagsExperimentsReset all to defaultHoiatus: katselised funktsioonid!Nende funktsioonide lubamisel võivad sirvimisandmed kaotsi minna või
+     teie turvalisus või privaatsus võib ohtu sattuda. Lubatud funktsioonid on
+     saadaval kõigile selle brauseri kasutajatele.Flags that apply system-wide can only be set by the owner: $1AvailableUnavailableEnabledDisabledNo matching experimentsNot available on your platform.RelaunchClear searchReset acknowledged.Experiment enabledLähtesta 

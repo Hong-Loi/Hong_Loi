@@ -1,0 +1,20 @@
+his._lineOffsets;
+        };
+        FullTextDocument.prototype.positionAt = function (offset) {
+            offset = Math.max(Math.min(offset, this._content.length), 0);
+            var lineOffsets = this.getLineOffsets();
+            var low = 0, high = lineOffsets.length;
+            if (high === 0) {
+                return Position.create(0, offset);
+            }
+            while (low < high) {
+                var mid = Math.floor((low + high) / 2);
+                if (lineOffsets[mid] > offset) {
+                    high = mid;
+                }
+                else {
+                    low = mid + 1;
+                }
+            }
+            // low is the least x for which the line offset is larger than the current offset
+            // or array.lengt

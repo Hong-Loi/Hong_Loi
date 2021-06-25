@@ -1,0 +1,18 @@
+rMetadata {
+		/**
+		 * A human-readable string that is shown when multiple outlines trees show for one document.
+		 */
+		label?: string;
+	}
+
+	/**
+	 * The workspace symbol provider interface defines the contract between extensions and
+	 * the [symbol search](https://code.visualstudio.com/docs/editor/editingevolved#_open-symbol-by-name)-feature.
+	 */
+	export interface WorkspaceSymbolProvider<T extends SymbolInformation = SymbolInformation> {
+
+		/**
+		 * Project-wide search for a symbol matching the given query string.
+		 *
+		 * The `query`-parameter should be interpreted in a *relaxed way* as the editor will apply its own highlighting
+		 * and scoring on the results. A good rule of thumb is to mat

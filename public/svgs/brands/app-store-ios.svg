@@ -1,0 +1,21 @@
+riginalLogVerbose.call(vscode_debugadapter_1.logger, `To client: ${JSON.stringify(clonedResponse)}`);
+                }
+                else {
+                    return originalLogVerbose.call(vscode_debugadapter_1.logger, textToLog);
+                }
+            };
+            super.sendResponse(response);
+        }
+        finally {
+            vscode_debugadapter_1.logger.verbose = originalLogVerbose;
+        }
+    }
+}
+ChromeDebugSession.FinishedStartingUpEventName = 'finishedStartingUp';
+exports.ChromeDebugSession = ChromeDebugSession;
+function logVersionInfo() {
+    vscode_debugadapter_1.logger.log(`OS: ${os.platform()} ${os.arch()}`);
+    vscode_debugadapter_1.logger.log(`Adapter node: ${process.version} ${process.arch}`);
+    const coreVersion = require('../../../package.json').version;
+    vscode_debugadapter_1.logger.log('vscode-chrome-debug-core: ' + coreVersion);
+    /* __GDPR__FR

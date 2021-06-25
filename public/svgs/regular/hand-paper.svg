@@ -1,0 +1,34 @@
+ immutable array of [diagnostics](#Diagnostic) or `undefined`.
+		 */
+		get(uri: Uri): ReadonlyArray<Diagnostic> | undefined;
+
+		/**
+		 * Check if this collection contains diagnostics for a
+		 * given resource.
+		 *
+		 * @param uri A resource identifier.
+		 * @returns `true` if this collection has diagnostic for the given resource.
+		 */
+		has(uri: Uri): boolean;
+
+		/**
+		 * Dispose and free associated resources. Calls
+		 * [clear](#DiagnosticCollection.clear).
+		 */
+		dispose(): void;
+	}
+
+	/**
+	 * Denotes a location of an editor in the window. Editors can be arranged in a grid
+	 * and each column represents one editor location in that grid by counting the editors
+	 * in order of their appearance.
+	 */
+	export enum ViewColumn {
+		/**
+		 * A *symbolic* editor column representing the currently active column. This value
+		 * can be used when opening editors, but the *resolved* [viewColumn](#TextEditor.viewColumn)-value
+		 * of editors will always be `One`, `Two`, `Three`,... or `undefined` but never `Active`.
+		 */
+		Active = -1,
+		/**
+		 * A *symbolic* editor column representing the column to the side of the active one.

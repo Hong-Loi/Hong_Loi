@@ -1,0 +1,11 @@
+NET::ERR_CERT_AUTHORITY_INVALID</span>" o "<span class="error-code">ERR_CERT_COMMON_NAME_INVALID</span>" o "<span class="error-code">NET::ERR_CERT_WEAK_SIGNATURE_ALGORITHM</span>" o "<span class="error-code">ERR_CERT_SYMANTEC_LEGACY</span>" o "SSL certificate error""Kumonekta sa network""Nahuhuli ang iyong orasan" o "Nauuna ang iyong orasan" o "<span class="error-code">NET::ERR_CERT_DATE_INVALID</span>"<h4>Hakbang 1: Mag-sign in sa portal</h4>
+    <p>Hinihiling sa iyong mag-sign in ng mga Wi-Fi network sa mga lugar gaya ng mga cafe o airport. Para makita ang page sa pag-sign in, bisitahin ang isang page na gumagamit ng <code>http://</code>.</p>
+    <ol>
+    <li>Pumunta sa anumang website na nagsisimula sa <code>http://</code>, gaya ng <a href="http://example.com" target="_blank">http://example.com</a>.</li>
+    <li>Sa magbubukas na page sa pag-sign in, mag-sign in para magamit ang internet.</li>
+    </ol>
+    <h4>Hakbang 2: Buksan ang page sa Incognito mode (computer lang)</h4>
+    <p>Buksan ang page na binibisita mo sa isang Incognito window.</p>
+    <p>Kung magbukas ang page, may hindi gumaganang extension ng Chrome. Para maayos ang error, i-off ang extension.</p>
+    <h4>Hakbang 3: I-update ang iyong operating system</h4>
+    <p>Tiyaking napapanahon ang iyong device.

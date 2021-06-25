@@ -1,0 +1,20 @@
+eExtensionsPath(null).then(() => {
+            const document = vscode_languageserver_types_1.TextDocument.create('test://test/test.html', 'html', 0, 'a:');
+            const position = vscode_languageserver_types_1.Position.create(0, 2);
+            const completionList = emmetHelper_1.doComplete(document, position, 'html', {
+                preferences: {},
+                showExpandedAbbreviation: 'always',
+                showAbbreviationSuggestions: true,
+                syntaxProfiles: {},
+                variables: {}
+            });
+            const expectedItems = ['a:link', 'a:mail', 'a:tel'];
+            assert_1.default.ok(expectedItems.every(x => !!completionList.items.find(y => y.label === x)), 'All snippet suggestions for a: not found');
+            return Promise.resolve();
+        });
+    });
+    mocha_1.it('should not provide any suggestions in html for class names or id', () => {
+        return updateExtensionsPath(null).then(() => {
+            const testCases = ['div.col', 'div#col'];
+            testCases.forEach(abbr => {
+              

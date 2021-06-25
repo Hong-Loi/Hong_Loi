@@ -1,0 +1,42 @@
+f [`SignatureHelp.activeSignature`](#SignatureHelp.activeSignature).
+		 */
+		activeParameter?: number;
+
+		/**
+		 * Creates a new signature information object.
+		 *
+		 * @param label A label string.
+		 * @param documentation A doc string.
+		 */
+		constructor(label: string, documentation?: string | MarkdownString);
+	}
+
+	/**
+	 * Signature help represents the signature of something
+	 * callable. There can be multiple signatures but only one
+	 * active and only one active parameter.
+	 */
+	export class SignatureHelp {
+
+		/**
+		 * One or more signatures.
+		 */
+		signatures: SignatureInformation[];
+
+		/**
+		 * The active signature.
+		 */
+		activeSignature: number;
+
+		/**
+		 * The active parameter of the active signature.
+		 */
+		activeParameter: number;
+	}
+
+	/**
+	 * How a [`SignatureHelpProvider`](#SignatureHelpProvider) was triggered.
+	 */
+	export enum SignatureHelpTriggerKind {
+		/**
+		 * Signa

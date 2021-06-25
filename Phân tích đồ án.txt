@@ -1,0 +1,21 @@
+ĐỒ ÁN WEN ĐỒNG HỒ SIÊU CẤP VIP BRO
+--->
+---->
+1.header:
+-top-header.
+-main-header.
+-content-header.
+2.body:
+-top-product:
+	+menu
+	+product-in-top
+-contentbody
+-bottom-product:
+	+content-in-botprod
+	+product-in-bottom
+-sale-body
+-info-body:
+	+info-content
+	+info-product
+-logo-body
+3.footer:

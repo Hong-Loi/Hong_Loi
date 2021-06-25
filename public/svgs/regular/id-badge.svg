@@ -1,0 +1,15 @@
+bview panel to restore. The serializer should take ownership of this panel. The
+		 * serializer must restore the webview's `.html` and hook up all webview events.
+		 * @param state Persisted state from the webview content.
+		 *
+		 * @return Thenable indicating that the webview has been fully restored.
+		 */
+		deserializeWebviewPanel(webviewPanel: WebviewPanel, state: any): Thenable<void>;
+	}
+
+	/**
+	 * Provider for text based custom editors.
+	 *
+	 * Text based custom editors use a [`TextDocument`](#TextDocument) as their data model. This considerably simplifies
+	 * implementing a custom editor as it allows VS Code to handle many common operations such as
+	 * undo and backup. The provider is 

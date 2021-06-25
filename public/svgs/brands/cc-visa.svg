@@ -1,0 +1,33 @@
+angeKind) {
+        /**
+         * Folding range for a comment
+         */
+        FoldingRangeKind["Comment"] = "comment";
+        /**
+         * Folding range for a imports or includes
+         */
+        FoldingRangeKind["Imports"] = "imports";
+        /**
+         * Folding range for a region (e.g. `#region`)
+         */
+        FoldingRangeKind["Region"] = "region";
+    })(FoldingRangeKind = exports.FoldingRangeKind || (exports.FoldingRangeKind = {}));
+    /**
+     * The folding range namespace provides helper functions to work with
+     * [FoldingRange](#FoldingRange) literals.
+     */
+    var FoldingRange;
+    (function (FoldingRange) {
+        /**
+         * Creates a new FoldingRange literal.
+         */
+        function create(startLine, endLine, startCharacter, endCharacter, kind) {
+            var result = {
+                startLine: startLine,
+                endLine: endLine
+            };
+            if (Is.defined(startCharacter)) {
+                result.startCharacter = startCharacter;
+            }
+            if (Is.defined(endCharacter)) {
+                result.endCharacter 

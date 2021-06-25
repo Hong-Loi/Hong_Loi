@@ -1,0 +1,62 @@
+e](#Disposable) that unsets this configuration.
+		 */
+		export function setLanguageConfiguration(language: string, configuration: LanguageConfiguration): Disposable;
+	}
+
+	/**
+	 * Represents the input box in the Source Control viewlet.
+	 */
+	export interface SourceControlInputBox {
+
+		/**
+		 * Setter and getter for the contents of the input box.
+		 */
+		value: string;
+
+		/**
+		 * A string to show as placeholder in the input box to guide the user.
+		 */
+		placeholder: string;
+
+		/**
+		 * Controls whether the input box is visible (default is `true`).
+		 */
+		visible: boolean;
+	}
+
+	interface QuickDiffProvider {
+
+		/**
+		 * Provide a [uri](#Uri) to the original resource of any given resource uri.
+		 *
+		 * @param uri The uri of the resource open in a text editor.
+		 * @param token A cancellation token.
+		 * @return A thenable that resolves to uri of the matching original resource.
+		 */
+		provideOriginalResource?(uri: Uri, token: CancellationToken): ProviderResult<Uri>;
+	}
+
+	/**
+	 * The theme-aware decorations for a
+	 * [source control resource state](#SourceControlResourceState).
+	 */
+	export interface SourceControlResourceThemableDecorations {
+
+		/**
+		 * The icon path for a specific
+		 * [source control resource state](#SourceControlResourceState).
+		 */
+		readonly iconPath?: string | Uri;
+	}
+
+	/**
+	 * The decorations for a [source control resource state](#SourceControlResourceState).
+	 * Can be independently specified for light and dark themes.
+	 */
+	export interface SourceControlResourceDecorations extends SourceControlResourceThemableDecorations {
+
+		/**
+		 * Whether the [source control resource state](#SourceControlResourceState) should
+		 * be striked-through in the UI.
+		 */
+		readonly st

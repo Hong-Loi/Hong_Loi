@@ -1,0 +1,2 @@
+RT_WEAK_SIGNATURE_ALGORITHM</span>" અથવા "<span class="error-code">ERR_CERT_SYMANTEC_LEGACY</span>" અથવા "SSL પ્રમાણપત્ર ભૂલ""નેટવર્ક સાથે કનેક્ટ કરો""તમારી ઘડિયાળ પાછળ છે" અથવા "તમારી ઘડિયાળ આગળ છે" અથવા "<span class="error-code">NET::ERR_CERT_DATE_INVALID</span>"<h4>પગલું 1: પોર્ટલમાં સાઇન ઇન કરો</h4>
+    <p>કાફે અથવા એરપોર્ટ જેવા સ્થાન પરના વાઇ-ફાઇ નેટવર્કમાં તમારે સાઇન ઇન કરવું જરૂરી હોય છે. સાઇન ઇન પેજ જોવા માટે, <code>http://</code>નો ઉપયોગ 

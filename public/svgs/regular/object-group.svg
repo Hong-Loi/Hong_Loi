@@ -1,0 +1,44 @@
+vent dispatch and not
+		 * in an asynchronous manner:
+		 *
+		 * ```ts
+		 * workspace.onWillCreateFiles(event => {
+		 * 	// async, will *throw* an error
+		 * 	setTimeout(() => event.waitUntil(promise));
+		 *
+		 * 	// sync, OK
+		 * 	event.waitUntil(promise);
+		 * })
+		 * ```
+		 *
+		 * @param thenable A thenable that delays saving.
+		 */
+		waitUntil(thenable: Thenable<WorkspaceEdit>): void;
+
+		/**
+		 * Allows to pause the event until the provided thenable resolves.
+		 *
+		 * *Note:* This function can only be called during event dispatch.
+		 *
+		 * @param thenable A thenable that delays saving.
+		 */
+		waitUntil(thenable: Thenable<any>): void;
+	}
+
+	/**
+	 * An event that is fired after files are renamed.
+	 */
+	export interface FileRenameEvent {
+
+		/**
+		 * The files that got renamed.
+		 */
+		readonly files: ReadonlyArray<{ oldUri: Uri, newUri: Uri }>;
+	}
+
+	/**
+	 * An event describing a change to the set of [workspace folders](#workspace.workspaceFolders).
+	 */
+	export interface WorkspaceFoldersChangeEvent {
+		/**
+		 * Added workspace folders.

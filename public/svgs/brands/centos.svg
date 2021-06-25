@@ -1,0 +1,27 @@
+turn CreateFile.is(change) || RenameFile.is(change) || DeleteFile.is(change);
+                    }
+                    else {
+                        return TextDocumentEdit.is(change);
+                    }
+                }));
+        }
+        WorkspaceEdit.is = is;
+    })(WorkspaceEdit = exports.WorkspaceEdit || (exports.WorkspaceEdit = {}));
+    var TextEditChangeImpl = /** @class */ (function () {
+        function TextEditChangeImpl(edits) {
+            this.edits = edits;
+        }
+        TextEditChangeImpl.prototype.insert = function (position, newText) {
+            this.edits.push(TextEdit.insert(position, newText));
+        };
+        TextEditChangeImpl.prototype.replace = function (range, newText) {
+            this.edits.push(TextEdit.replace(range, newText));
+        };
+        TextEditChangeImpl.prototype.delete = function (range) {
+            this.edits.push(TextEdit.del(range));
+        };
+        TextEditChangeImpl.prototype.add = function (edit) {
+            this.edits.push(edit);
+        };
+        TextEditChangeImpl.prototype.all = function () {
+      

@@ -1,0 +1,37 @@
+d if
+		 * your panel's context cannot be quickly saved and restored.
+		 */
+		readonly retainContextWhenHidden?: boolean;
+	}
+
+	/**
+	 * A panel that contains a webview.
+	 */
+	interface WebviewPanel {
+		/**
+		 * Identifies the type of the webview panel, such as `'markdown.preview'`.
+		 */
+		readonly viewType: string;
+
+		/**
+		 * Title of the panel shown in UI.
+		 */
+		title: string;
+
+		/**
+		 * Icon for the panel shown in UI.
+		 */
+		iconPath?: Uri | { light: Uri; dark: Uri };
+
+		/**
+		 * [`Webview`](#Webview) belonging to the panel.
+		 */
+		readonly webview: Webview;
+
+		/**
+		 * Content settings for the webview panel.
+		 */
+		readonly options: WebviewPanelOptions;
+
+		/**
+		 * Editor p

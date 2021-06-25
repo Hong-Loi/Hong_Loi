@@ -1,0 +1,44 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const events_1 = require("events");
+class MessageError extends Error {
+    constructor(error) {
+        super(error.message);
+        this._code = error.code || 0;
+        this._data = error.data || null;
+    }
+    get code() {
+        return this._code;
+    }
+    get data() {
+        return this._data;
+    }
+}
+exports.MessageError = MessageError;
+/**
+ * Creates a RPC Client.
+ * It is intentional that Client does not create a WebSocket object since we prefer composability
+ * The Client can be used to communicate over processes, http or anything that can send and receive strings
+ * It just needs to pass in an object that implements LikeSocket interface
+ */
+class Client extends events_1.EventEmitter {
+    constructor(socket, opts) {
+        super();
+        this._responsePromiseMap = new Map();
+        this._nextMessageId = 0;
+        this._connected = false;
+        this._emitLog = false;
+        this._consoleLog = false;
+        this._requestQueue = [];
+        this.setLogging(opts);
+        if (!socket) {
+            throw new TypeError('socket cannot be undefined or null');
+        }
+        this._socket = socket;
+        socket.on('open', () => {
+            this._connected = true;
+            this._sendQueuedRequests();
+        });
+        socket.on('message', (message) => this.processMessage(message));
+    }
+    p

@@ -1,0 +1,65 @@
+amespace FormattingOptions {
+    /**
+     * Creates a new FormattingOptions literal.
+     */
+    function create(tabSize: number, insertSpaces: boolean): FormattingOptions;
+    /**
+     * Checks whether the given literal conforms to the [FormattingOptions](#FormattingOptions) interface.
+     */
+    function is(value: any): value is FormattingOptions;
+}
+/**
+ * A document link is a range in a text document that links to an internal or external resource, like another
+ * text document or a web site.
+ */
+export declare class DocumentLink {
+    /**
+     * The range this link applies to.
+     */
+    range: Range;
+    /**
+     * The uri this link points to.
+     */
+    target?: string;
+    /**
+     * A data entry field that is preserved on a document link between a
+     * DocumentLinkRequest and a DocumentLinkResolveRequest.
+     */
+    data?: any;
+}
+/**
+ * The DocumentLink namespace provides helper functions to work with
+ * [DocumentLink](#DocumentLink) literals.
+ */
+export declare namespace DocumentLink {
+    /**
+     * Creates a new DocumentLink literal.
+     */
+    function create(range: Range, target?: string, data?: any): DocumentLink;
+    /**
+     * Checks whether the given literal conforms to the [DocumentLink](#DocumentLink) interface.
+     */
+    function is(value: any): value is DocumentLink;
+}
+/**
+ * A selection range represents a part of a selection hierarchy. A selection range
+ * may have a parent selection range that contains it.
+ */
+export interface SelectionRange {
+    /**
+     * The [range](#Range) of this selection range.
+     */
+    range: Range;
+    /**
+     * The parent selection range containing this range. Therefore `parent.range` must contain `this.range`.
+     */
+    parent?: SelectionRange;
+}
+/**
+ * The SelectionRange namespace provides helper function to work with
+ * SelectionRange literals.
+ */
+export declare namespace SelectionRange {
+    /**
+     * Creates a new SelectionRange
+     * @p

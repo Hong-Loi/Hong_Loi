@@ -1,0 +1,19 @@
+          var left = data.slice(0, p);
+            var right = data.slice(p);
+            mergeSort(left, compare);
+            mergeSort(right, compare);
+            var leftIdx = 0;
+            var rightIdx = 0;
+            var i = 0;
+            while (leftIdx < left.length && rightIdx < right.length) {
+                var ret = compare(left[leftIdx], right[rightIdx]);
+                if (ret <= 0) {
+                    // smaller_equal -> take left to preserve order
+                    data[i++] = left[leftIdx++];
+                }
+                else {
+                    // greater -> take right
+                    data[i++] = right[rightIdx++];
+                }
+            }
+            while (leftI

@@ -1,0 +1,28 @@
+ the section identifier. The following snippets shows how to retrieve all configurations
+	 * from `launch.json`:
+	 *
+	 * ```ts
+	 * // launch.json configuration
+	 * const config = workspace.getConfiguration('launch', vscode.workspace.workspaceFolders[0].uri);
+	 *
+	 * // retrieve values
+	 * const values = config.get('configurations');
+	 * ```
+	 *
+	 * Refer to [Settings](https://code.visualstudio.com/docs/getstarted/settings) for more information.
+	 */
+	export interface WorkspaceConfiguration {
+
+		/**
+		 * Return a value from this configuration.
+		 *
+		 * @param section Configuration name, supports _dotted_ names.
+		 * @return The value `section` denotes or `undefined`.
+		 */
+		get<T>(section: string): T | undefined;
+
+		/**
+		 * Return a value from this configuration.
+		 *
+		 * @param section Configuration name, supports _dotted_ names.
+		 * @param defaultValue A v
